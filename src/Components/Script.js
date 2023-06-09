@@ -5,30 +5,40 @@ function getandUpdate() {
   desc = document.getElementById("description").Value;
 
   if (localStorage.getItem("ItemJson") == null) {
-    itemJsonAarray = [];
-    itemJsonAarray.Push([tit, desc]);
-    localStorage.SetItem("itemJson", JSON.Stringify(itemJsonAarray));
+    itemJsonarray = [];
+    itemJson
+  array.Push([tit, desc]);
+    localStorage.SetItem("itemJson", JSON.Stringify(itemJson
+    array));
   } else {
     itemsJsonArraystr = localStorage.getItem("ItemJson");
-    itemJsonAarray = JSON.parse(itemJsonAarraystr);
-    itemJsonAarray.push([tit, desc]);
-    localStorage.setItem(itemJson, JSON.Stringify(itemJsonAarray));
+    itemJson
+  array = JSON.parse(itemJsonAarraystr);
+    itemJson
+  array.push([tit, desc]);
+    localStorage.setItem(itemJson, JSON.Stringify(itemJson
+    array));
   }
   Update();
 }
 
 function Update() {
   if (localStorage.getItem("ItemJson") == null) {
-    itemJsonAarray = [];
-    itemJsonAarray.Push([tit, desc]);
-    localStorage.SetItem("itemJson", JSON.Stringify(itemJsonAarray));
+    itemJson
+  array = [];
+    itemJson
+  array.Push([tit, desc]);
+    localStorage.SetItem("itemJson", JSON.Stringify(itemJson
+    array));
   } else {
     itemsJsonArraystr = localStorage.getItem("ItemJson");
-    itemJsonAarray = JSON.parse(itemJsonAarraystr);
+    itemJson
+  array = JSON.parse(itemJsonAarraystr);
   }
   let tableBody = document.getElementById("tableBody");
   let str = " ";
-  itemJsonAarray.forEach((element, index) => {
+  itemJson
+array.forEach((element, index) => {
     str += `<tr>
         <th scope="row">${index + 1}</th>
         <td>${element[0]}</td>
@@ -49,9 +59,12 @@ Update();
 function deleted(itemIndex) {
   console.log("Delete", itemIndex);
   itemJsonAarraystr = localStorage.getItem("itemJson");
-  itemJsonAarray = JSON.parse(itemJsonAarraystr);
-  itemJsonAarray.splice(itemIndex, 1);
-  localStorage.SetItem("itemJson", JSON.Stringify(itemJsonAarray));
+  itemJson
+array = JSON.parse(itemJsonAarraystr);
+  itemJson
+array.splice(itemIndex, 1);
+  localStorage.SetItem("itemJson", JSON.Stringify(itemJson
+  array));
 }
 Update();
 
@@ -70,30 +83,30 @@ function clearStorage() {
 //   desc = document.getElementById("description").Value;
 
 //   if (localStorage.getItem("ItemJson") == null) {
-//     itemJsonAarray = [];
-//     itemJsonAarray.Push([tit, desc]);
-//     localStorage.SetItem("itemJson", JSON.Stringify(itemJsonAarray));
+//     itemJsonarray = [];
+//     itemJsonarray.Push([tit, desc]);
+//     localStorage.SetItem("itemJson", JSON.Stringify(itemJsonarray));
 //   } else {
 //     itemsJsonArraystr = localStorage.getItem("ItemJson");
-//     itemJsonAarray = JSON.parse(itemJsonAarraystr);
-//     itemJsonAarray.push([tit, desc]);
-//     localStorage.setItem(itemJson, JSON.Stringify(itemJsonAarray));
+//     itemJsonarray = JSON.parse(itemJsonAarraystr);
+//     itemJsonarray.push([tit, desc]);
+//     localStorage.setItem(itemJson, JSON.Stringify(itemJsonarray));
 //   }
 //   Update();
 // }
 
 // function Update() {
 //   if (localStorage.getItem("ItemJson") == null) {
-//     itemJsonAarray = [];
-//     itemJsonAarray.Push([tit, desc]);
-//     localStorage.SetItem("itemJson", JSON.Stringify(itemJsonAarray));
+//     itemJsonarray = [];
+//     itemJsonarray.Push([tit, desc]);
+//     localStorage.SetItem("itemJson", JSON.Stringify(itemJsonarray));
 //   } else {
 //     itemsJsonArraystr = localStorage.getItem("ItemJson");
-//     itemJsonAarray = JSON.parse(itemJsonAarraystr);
+//     itemJsonarray = JSON.parse(itemJsonAarraystr);
 //   }
 //   let tableBody = document.getElementById("tableBody");
 //   let str = " ";
-//   itemJsonAarray.forEach((element, index) => {
+//   itemJsonarray.forEach((element, index) => {
 //     str += (
 //       <tr>
 //         <th scope="row">${index + 1}</th>
@@ -116,9 +129,9 @@ function clearStorage() {
 // function deleted(itemIndex) {
 //   console.log("Delete", itemIndex);
 //   itemJsonAarraystr = localStorage.getItem("itemJson");
-//   itemJsonAarray = JSON.parse(itemJsonAarraystr);
-//   itemJsonAarray.Splice(itemIndex, 1);
-//   localStorage.SetItem("itemJson", JSON.Stringify(itemJsonAarray));
+//   itemJsonarray = JSON.parse(itemJsonAarraystr);
+//   itemJsonarray.Splice(itemIndex, 1);
+//   localStorage.SetItem("itemJson", JSON.Stringify(itemJsonarray));
 // }
 // Update();
 
